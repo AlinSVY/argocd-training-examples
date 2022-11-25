@@ -1,0 +1,12 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: simple-example-alins
+spec:
+  port:
+    targetPort: 5000
+  to:
+    kind: Service
+    name: simple-example-alins
+    weight: 100
+  wildcardPolicy: None
